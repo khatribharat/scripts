@@ -81,6 +81,6 @@ if __name__ == '__main__':
 		scroll_to_bottom()
 		nxt = browser.find_element(By.CSS_SELECTOR, "button[aria-label='Next']")
 		pageNo += 1
-		if nxt == None or pageNo == max_conn_pages_available:
+		if nxt == None or pageNo > max_conn_pages_available:
 			break
 		nxt.click()
